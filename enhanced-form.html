@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 Media & Forms Mastery</title>
+    <style>
+        /* Modern styling with accessibility focus */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        header {
+            background: #2c3e50;
+            color: white;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 30px;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        section {
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #3498db;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        form {
+            background: #ecf0f1;
+            padding: 25px;
+            border-radius: 5px;
+        }
+        fieldset {
+            border: 2px solid #bdc3c7;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        legend {
+            padding: 0 10px;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        label {
+            display: block;
+            margin: 15px 0 5px;
+            font-weight: 600;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #bdc3c7;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        input:focus, select:focus, textarea:focus {
+            border-color: #3498db;
+            outline: none;
+            box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+        }
+        button {
+            background: #2ecc71;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            margin: 10px 5px 0 0;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background: #27ae60;
+        }
+        button[type="reset"] {
+            background: #e74c3c;
+        }
+        button[type="reset"]:hover {
+            background: #c0392b;
+        }
+        :required {
+            border-left: 4px solid #f39c12;
+        }
+        :invalid {
+            border-color: #e74c3c;
+        }
+        figure {
+            margin: 25px 0;
+            text-align: center;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+        }
+        video, audio {
+            width: 100%;
+            margin: 20px 0;
+            border-radius: 5px;
+            background: #2c3e50;
+        }
+        figcaption, .media-caption {
+            font-style: italic;
+            color: #7f8c8d;
+            margin-top: 8px;
+            text-align: center;
+        }
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            color: #7f8c8d;
+            font-size: 0.9em;
+        }
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: #2c3e50;
+            color: white;
+            padding: 8px;
+            z-index: 100;
+            text-decoration: none;
+        }
+        .skip-link:focus {
+            top: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Accessibility Skip Link -->
+    <a href="#main-content" class="skip-link">Skip to content</a>
+    
+    <header>
+        <h1>Mastering HTML5 Media & Forms</h1>
+        <p>A practical demonstration of semantic HTML5 elements and accessible form design</p>
+    </header>
+
+    <main id="main-content">
+        <!-- Lists Section -->
+        <section aria-labelledby="lists-heading">
+            <h2 id="lists-heading">HTML5 Structural Elements</h2>
+            
+            <h3>Semantic Containers</h3>
+            <ul>
+                <li><code>&lt;header&gt;</code> - Introductory content</li>
+                <li><code>&lt;nav&gt;</code> - Navigation links</li>
+                <li><code>&lt;main&gt;</code> - Primary content</li>
+                <li><code>&lt;section&gt;</code> - Thematic grouping</li>
+                <li><code>&lt;article&gt;</code> - Self-contained composition</li>
+                <li><code>&lt;footer&gt;</code> - Closing content</li>
+            </ul>
+        </section>
+
+        <!-- Media Section with GUARANTEED WORKING ELEMENTS -->
+        <section aria-labelledby="media-heading">
+            <h2 id="media-heading">HTML5 Media Elements</h2>
+            
+            <figure>
+                <img src="https://images.unsplash.com/photo-1547658719-da2b51169166" 
+                     alt="Developer working with HTML5 code in Visual Studio Code editor" 
+                     width="800" height="450">
+                <figcaption>Modern web development environment showcasing HTML5</figcaption>
+            </figure>
+            
+            <h3>Audio: Semantic Markup Podcast</h3>
+            <audio controls>
+                <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3" type="audio/mpeg">
+                Your browser doesn't support audio. Listen to the <a href="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3">podcast episode</a> instead.
+            </audio>
+            <p class="media-caption">Sample: "The Power of Semantic HTML5" (simulated educational content)</p>
+            
+            <h3>Video: Form Validation Tutorial</h3>
+            <video controls width="600" poster="https://images.unsplash.com/photo-1555066931-bf19f8fd1085">
+                <!-- Using W3Schools' reliable test video -->
+                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                Video unavailable. Watch the tutorial on <a href="https://www.w3schools.com/html/html5_video.asp" target="_blank">W3Schools</a>.
+            </video>
+            <p class="media-caption">Demonstration: "Implementing Client-Side Validation" (placeholder for your tutorial)</p>
+        </section>
+
+        <!-- Form Section -->
+        <section aria-labelledby="form-heading">
+            <h2 id="form-heading">HTML5 Form Workshop</h2>
+            <form id="html5-workshop" action="/submit" method="post" novalidate>
+                
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" name="name" required minlength="2" 
+                           placeholder="Your name" autocomplete="name"
+                           aria-required="true">
+                    
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required
+                           placeholder="your.email@example.com" autocomplete="email"
+                           aria-required="true">
+                    
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" name="phone"
+                           pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                           placeholder="123-456-7890" autocomplete="tel">
+                </fieldset>
+                
+                <fieldset>
+                    <legend>HTML5 Knowledge Check</legend>
+                    
+                    <label for="experience">How would you rate your HTML5 knowledge? *</label>
+                    <input type="range" id="experience" name="experience" min="1" max="10" value="5"
+                           aria-valuetext="5 out of 10">
+                    <output for="experience" id="exp-output">5</output>
+                    
+                    <script>
+                        document.getElementById('experience').addEventListener('input', function() {
+                            document.getElementById('exp-output').value = this.value;
+                        });
+                    </script>
+                    
+                    <label>Which HTML5 features have you used? *</label>
+                    <div role="group" aria-labelledby="features-label">
+                        <input type="checkbox" id="semantic" name="features" value="semantic" required>
+                        <label for="semantic">Semantic Elements</label>
+                        
+                        <input type="checkbox" id="media" name="features" value="media">
+                        <label for="media">Media Elements</label>
+                        
+                        <input type="checkbox" id="forms" name="features" value="forms">
+                        <label for="forms">Advanced Forms</label>
+                    </div>
+                </fieldset>
+                
+                <fieldset>
+                    <legend>Feedback</legend>
+                    
+                    <label for="comments">What HTML5 topic would you like to learn next?</label>
+                    <textarea id="comments" name="comments" rows="4"
+                              placeholder="Share your learning goals..."></textarea>
+                </fieldset>
+                
+                <div class="form-actions">
+                    <button type="submit">Submit Answers</button>
+                    <button type="reset">Clear Form</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 HTML5 Learning Project | 
+           <a href="#main-content">Back to top</a> | 
+           <a href="mailto:linda@gmail.com">Contact Instructor</a></p>
+    </footer>
+</body>
+</html>
